@@ -23,7 +23,7 @@ connectDB();
 connectCloudinary();
 
 // // Middleware setup
-const allowedOrigins = ["https://e-commerce-groceryproject-2.onrender.com"];
+const allowedOrigins = ["https://e-commerce-groceryproject-1.onrender.com"];
 app.use(express.json()); // Middleware to parse JSON bodies (critical for req.body.cartItems)
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(cookieParser());
