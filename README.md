@@ -41,7 +41,7 @@ SELLER_PASSWORD="admin123"
 
 ---
 
-## 👥 User Features
+## User Features
 
 -  Register and Login securely (JWT-based)
 - Browse grocery items by category
@@ -52,7 +52,7 @@ SELLER_PASSWORD="admin123"
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - React.js
@@ -69,9 +69,9 @@ SELLER_PASSWORD="admin123"
 
 ---
 
-## 🧠 How to Run Locally
+##  How to Run Locally
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/Bhoomikals06/E-commerce-groceryproject.git
 
