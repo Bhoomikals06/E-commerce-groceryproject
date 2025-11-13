@@ -207,6 +207,18 @@ const AppContextProvider = ({ children }) => {
     return;
   }
 
+      let cartData = structuredClone(cartItems || {});
+
+  if (cartData[itemId]) {
+    cartData[itemId] += 1;
+  } else {
+    cartData[itemId] = 1;
+  }
+
+  setCartItems(cartData);
+  toast.success("Added to cart");
+};
+
   // update cart item quantity
   const updateCartItem = (itemId, quantity) => {
     let cartData = structuredClone(cartItems);
