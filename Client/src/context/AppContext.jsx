@@ -187,18 +187,25 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-  const addToCart = (itemId) => {
-    let cartData = structuredClone(cartItems || {}); // safeguard for undefined
+  // const addToCart = (itemId) => {
+  //   let cartData = structuredClone(cartItems || {}); // safeguard for undefined
 
-    if (cartData[itemId]) {
-      cartData[itemId] += 1;
-    } else {
-      cartData[itemId] = 1;
-    }
+  //   if (cartData[itemId]) {
+  //     cartData[itemId] += 1;
+  //   } else {
+  //     cartData[itemId] = 1;
+  //   }
 
-    setCartItems(cartData);
-    toast.success("Added to cart");
-  };
+  //   setCartItems(cartData);
+  //   toast.success("Added to cart");
+  // };
+
+    const addToCart = (itemId) => {
+  if (!user) {
+    toast.error("Please login to add items to cart");
+    navigate("/login");
+    return;
+  }
 
   // update cart item quantity
   const updateCartItem = (itemId, quantity) => {
